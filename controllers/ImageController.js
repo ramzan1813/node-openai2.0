@@ -1,29 +1,35 @@
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPEN_API_KET,
 });
 const openai = new OpenAIApi(configuration);
 
-//   res.status(200).json({
-//     success: true,
-//     data: "hello world",
-//   });
-// };
 const img = async (req, res) => {
+  const { prompt, size } = req.body;
+  console.log(size);
   try {
     const response = await openai.createImage({
-      prompt: "A cute baby sea otter",
-      n: 2,
-      size: "1024x1024",
+      prompt,
+      n: 3,
+      size,
     });
     res.status(200).json({
       success: true,
-      img
+      data: response.data.data,
+    });
   } catch (error) {
-    if (error.respon) {
-      res.status(500).json({
+    if (error.response) {
+      res.send({
         success: false,
+        data: "API call response error",
       });
+      // console.log(error.response.status);
+    } else {
+      res.send({
+        success: false,
+        data: "back end error",
+      });
+      // console.log("back end error");
     }
   }
 };
