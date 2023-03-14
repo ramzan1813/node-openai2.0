@@ -6,11 +6,10 @@ const openai = new OpenAIApi(configuration);
 
 const img = async (req, res) => {
   const { prompt, size } = req.body;
-  console.log(size);
   try {
     const response = await openai.createImage({
       prompt,
-      n: 3,
+      n: 4,
       size,
     });
     res.status(200).json({

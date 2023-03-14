@@ -102,8 +102,10 @@ form button:hover {
 /* Image */
 
 .image {
+  margin: auto;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 h3{
   margin: auto;
@@ -120,21 +122,19 @@ h3{
 .msg {
   font-size: 1.6rem;
   text-align: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 .image-container02{
-  margin: auto;
+  margin: auto 10%;
+  display: flex;
+  flex-direction: row;
 }
 .image-container02 >img{
   margin: auto;
-  width: 60%;
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  /* font-weight: 160px;
-  font-size: larger;
-  font-weight: bolder;
-  text-align: center; */
+
+  width: 20%;
+  /* border-radius: 50px; */
+
 
 }
 .btn{
@@ -169,6 +169,19 @@ form select {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
+.image-container{
+  width: 90%;
+}
 
-  
+.image-container02{
+  margin: auto;
+  flex-direction: column;
+}
+.image-container02 >img{
+  margin: auto;
+  width: 60%;
+  margin-bottom: 10px;
+  /* border-radius: 50px; */
+
+}
 }

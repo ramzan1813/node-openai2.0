@@ -87,6 +87,7 @@ function change(event) {
     document.querySelector("#size_div").hidden = false;
 
     // imageGeneration();
+
     document.querySelector("#prompt_div").hidden = true;
   } else {
     document.querySelector("#size_div").hidden = true;
