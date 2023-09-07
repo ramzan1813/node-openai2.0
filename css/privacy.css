@@ -1,0 +1,23 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* border: #1aca29 solid 2px; */
+    align-items: center;
+    font-size: large;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: #666666
+}
+
+
+.privacy{
+    margin: 5px 15rem;
+  }
+  .contant-tab{
+    margin :1rem .5rem ;
+    
+  }
+  .contant-tab>ol{
+    padding: .5rem 1.5rem;
+  }
